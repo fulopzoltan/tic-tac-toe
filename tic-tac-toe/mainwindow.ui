@@ -7,15 +7,405 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>600</height>
+    <height>800</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
-  <widget class="QStatusBar" name="statusbar"/>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow{
+	padding:20px;
+}
+QMessageBox 
+{
+background-color:#1e5f74;
+color:#fcdab7;
+}
+
+QMessageBox QLabel {
+    color: #aaa;
+}
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>1</horstretch>
+     <verstretch>1</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:#1d2d50;
+padding:20px;</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,5">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>20</number>
+    </property>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLineEdit" name="playerMove">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <family>Impact</family>
+          <pointsize>26</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:none;
+font: 26pt &quot;Impact&quot;;
+color: #ffbd69;
+
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="frame">
+         <bool>false</bool>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetMaximumSize</enum>
+      </property>
+      <property name="horizontalSpacing">
+       <number>0</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>30</number>
+      </property>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="pushButton_3_1">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>200</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Impact</family>
+          <pointsize>72</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton  {border:none; background-color:#133b5c;}
+
+</string>
+        </property>
+        <property name="text">
+         <string>x</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="pushButton_1_3">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>200</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Impact</family>
+          <pointsize>72</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton  {border:none; background-color:#133b5c;}
+
+</string>
+        </property>
+        <property name="text">
+         <string>x</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="pushButton_1_1">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>200</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Impact</family>
+          <pointsize>72</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton  {border:none; background-color:#133b5c;}
+
+</string>
+        </property>
+        <property name="text">
+         <string>x</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QPushButton" name="pushButton_3_3">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>200</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Impact</family>
+          <pointsize>72</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton  {border:none; background-color:#133b5c;}
+
+</string>
+        </property>
+        <property name="text">
+         <string>x</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="pushButton_2_3">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>200</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Impact</family>
+          <pointsize>72</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton  {border:none; background-color:#133b5c;}
+
+</string>
+        </property>
+        <property name="text">
+         <string>x</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="pushButton_2_1">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>200</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Impact</family>
+          <pointsize>72</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton  {border:none; background-color:#133b5c;}
+
+</string>
+        </property>
+        <property name="text">
+         <string>x</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QPushButton" name="pushButton_2_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>200</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Impact</family>
+          <pointsize>72</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton  {border:none; background-color:#133b5c;}
+
+</string>
+        </property>
+        <property name="text">
+         <string>x</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="pushButton_1_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>200</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Impact</family>
+          <pointsize>72</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton  {border:none; background-color:#133b5c;}
+
+</string>
+        </property>
+        <property name="text">
+         <string>x</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="pushButton_3_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>200</width>
+          <height>200</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Impact</family>
+          <pointsize>72</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton  {border:none; background-color:#133b5c;}
+
+</string>
+        </property>
+        <property name="text">
+         <string>x</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:#1e5f74;
+color:white;</string>
+   </property>
+   <widget class="QMenu" name="menuGame">
+    <property name="title">
+     <string>Game</string>
+    </property>
+    <addaction name="actionRestart"/>
+   </widget>
+   <addaction name="menuGame"/>
+  </widget>
+  <action name="actionRestart">
+   <property name="text">
+    <string>Restart</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
