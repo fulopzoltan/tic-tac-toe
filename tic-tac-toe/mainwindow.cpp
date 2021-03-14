@@ -66,12 +66,14 @@ void MainWindow::playerClicked() {
   updateGame();
   switch (ticTacToe.checkBoard()) {
   case status::WON: {
+    setButtonStatus(true);
     QMessageBox::about(this, "GAME FINISHED",
                        "Game finished " + QString(moveMap[move == 1 ? 2 : 1]) +
                            " WON");
     break;
   }
   case status::TIE: {
+    setButtonStatus(true);
     QMessageBox::about(this, "GAME FINISHED", "Game finished as a TIE");
     break;
   }
@@ -81,7 +83,14 @@ void MainWindow::playerClicked() {
 }
 
 void MainWindow::restartGame() {
+  setButtonStatus(false);
   move = 1;
   ticTacToe.clearBoard();
   updateGame();
+}
+
+void MainWindow::setButtonStatus(bool stat) {
+  for (int i = 0; i < 9; ++i) {
+    buttons[i]->setDisabled(stat);
+  }
 }

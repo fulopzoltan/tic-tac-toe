@@ -32,5 +32,6 @@ private:
 public slots:
   void playerClicked();
   void restartGame();
+  void setButtonStatus(bool stat);
 };
 #endif // MAINWINDOW_H
